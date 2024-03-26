@@ -31,5 +31,7 @@ export class HouseController {
 
     sellHouse(houseID) {
         console.log('selling', houseID)
+        houseService.sellHouse(houseID)
+        this.drawHouses()
     }
 }

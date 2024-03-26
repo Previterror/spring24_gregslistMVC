@@ -28,6 +28,13 @@ class HouseService {
         console.log('houses ready to move to appstate?', houses)
         AppState.houses = houses
     }
+
+    sellHouse(houseID) {
+        let indexToDelete = AppState.houses.findIndex(house => house.id == houseID)
+        console.log('selling 🔧', indexToDelete)
+        AppState.houses.splice(indexToDelete, 1)
+        this.saveHouses()
+    }
 }
 
 export const houseService = new HouseService()
