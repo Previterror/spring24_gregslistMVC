@@ -1,10 +1,11 @@
 import { AppState } from "../AppState.js"
-import { HouseService } from "../services/HouseService.js"
+import { houseService } from "../services/HouseService.js"
 import { getFormData } from "../utils/FormHandler.js"
 
 export class HouseController {
     constructor() {
         console.log('🏡 controller loaded')
+        houseService.loadHouses()
         this.drawHouses()
     }
 
@@ -23,6 +24,8 @@ export class HouseController {
 
         let houseData = getFormData(event.target)
         console.log('Creating a new house listing', houseData);
-        HouseService.addHouse()
+        houseService.addHouse(houseData)
+        console.log('appstate.houses array', AppState.houses)
+        this.drawHouses()
     }
 }
