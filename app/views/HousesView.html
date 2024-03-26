@@ -4,9 +4,50 @@
         <h1>D'ya need a new home?</h1>
     </div>
     <section>
-        <form action="">Eventually a form will be here.</form>
+        <form onsubmit="app.HouseController.addHouse()" class="row border shadow my-3 rounded py-2">
+            <h4>Need to sell a house instead?</h4>
+            <div class="col-4 mb-3">
+                <label for="">Year Built</label>
+                <input type="number" name="year" class="form-control" min="1776" max="2025" placeholder="1999">
+            </div>
+            <div class="col-4 mb-3">
+                <label for="">Name</label>
+                <input type="text" name="name" class="form-control" minlength="2" maxlength="25"
+                    placeholder="Cozy Cottage">
+            </div>
+            <div class="col-4 mb-3">
+                <label for="">Number of Bedrooms</label>
+                <input type="number" name="bedrooms" class="form-control" min="1" max="20" placeholder="1">
+            </div>
+            <div class="col-2 mb-3">
+                <label for="">Number of Bathrooms</label>
+                <input type="number" name="bathrooms" class="form-control" placeholder="1">
+            </div>
+            <div class="col-4 mb-3">
+                <label for="">Square Footage</label>
+                <input type="range" name="sqft" class="form-range" min="100" max="5000" placeholder="1500">
+            </div>
+            <div class="col-3 mb-3">
+                <label for="">Price</label>
+                <input type="number" name="price" class="form-control" placeholder="$$$">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="">Description</label>
+                <input type="text" name="description" class="form-control"
+                    placeholder="Life doesn't want you to have jetskis, but this house does!">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="">Image URL of House</label>
+                <input type="url" name="imgUrl" class=" form-control" placeholder="https://...">
+            </div>
+            <div class="mb-2">
+                <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+        </form>
     </section>
+</div>
+</section>
 
-    <div class="row" id="houses-list">
+<div class="row" id="houses-list">
 
-    </div>
+</div>

@@ -1,6 +1,28 @@
+import { AppState } from "../AppState.js"
+import { HouseService } from "../services/HouseService.js"
+import { getFormData } from "../utils/FormHandler.js"
 
 export class HouseController {
     constructor() {
-        console.log('🏡')
+        console.log('🏡 controller loaded')
+        this.drawHouses()
+    }
+
+    drawHouses() {
+        console.log('🏘 🏘 🏘 houses drawn')
+        const houses = AppState.houses
+        let housesHTML = ''
+        houses.forEach(house => housesHTML += house.HouseCard)
+        const houselistElm = document.getElementById('houses-list')
+        houselistElm.innerHTML = housesHTML
+    }
+
+    addHouse() {
+        event.preventDefault()
+        console.log('+🏠 adding')
+
+        let houseData = getFormData(event.target)
+        console.log('Creating a new house listing', houseData);
+        HouseService.addHouse()
     }
 }
