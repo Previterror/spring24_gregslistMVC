@@ -28,4 +28,8 @@ export class HouseController {
         console.log('appstate.houses array', AppState.houses)
         this.drawHouses()
     }
+
+    sellHouse(houseID) {
+        console.log('selling', houseID)
+    }
 }

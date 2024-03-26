@@ -2,7 +2,7 @@ import { generateId } from "../utils/GenerateId.js"
 
 export class House {
     constructor(data) {
-        this.id = data.id || generateId
+        this.id = data.id || generateId()
         this.year = data.year
         this.name = data.name
         this.bedrooms = data.bedrooms
@@ -28,7 +28,7 @@ export class House {
                 <p class="card-text">Bathrooms ${this.bathrooms}</p>
                 <p class="card-text">${this.description}</p>
                 <p class="bg-success p-2 rounded text-light fw-bold text-end">$${this.price}</p>
-                <button onclick="app.CarsController.deleteCar('${this.id}')" class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
+                <button onclick="app.HouseController.sellHouse('${this.id}')" class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
               </div>
             </div>
           </div>

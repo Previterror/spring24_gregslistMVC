@@ -19,7 +19,7 @@ class HouseService {
 
     loadHouses() {
         let dataString = localStorage.getItem('houses')
-        console.log('loading 🏡', dataString)
+        // console.log('loading 🏡', dataString)
         const houseData = JSON.parse(dataString)
         console.log('houses object now?', houseData)
         if (houseData == null) return
