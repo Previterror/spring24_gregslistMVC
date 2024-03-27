@@ -1,5 +1,6 @@
 import { CarsController } from "./controllers/CarsController.js";
 import { ExamplesController } from "./controllers/ExamplesController.js";
+import { FrogController } from "./controllers/FrogController.js";
 import { HomeController } from "./controllers/HomeController.js";
 import { HouseController } from "./controllers/HouseController.js";
 import { Router } from "./utils/Router.js";
@@ -42,6 +43,11 @@ export const router = new Router([
     path: '#/houses',
     controllers: [HouseController],
     view: 'app/views/HousesView.html'
+  },
+  {
+    path: '#/frogs',
+    controllers: [FrogController],
+    view: 'app/views/FrogsView.html'
   },
   {
     path: '#/about',

@@ -1,6 +1,6 @@
 import { generateId } from "../utils/GenerateId.js"
 
-export class House {
+export class Frog {
     constructor(data) {
         this.id = data.id || generateId()
         this.age = data.age
@@ -12,7 +12,7 @@ export class House {
         this.imgUrl = data.imgUrl
     }
 
-    get HouseCard() {
+    get FrogCard() {
         return `
         <div class="col-6 col-md-4">
             <div class="card">
@@ -25,7 +25,7 @@ export class House {
                 <p class="card-text">Weighing in at ${this.weight}</p>
                 <p class="card-text">${this.description}</p>
                 <p class="bg-success p-2 rounded text-light fw-bold text-end">$${this.price}</p>
-                <button onclick="app.HouseController.sellHouse('${this.id}')" class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
+                <button onclick="app.FrogController.sellFrog('${this.id}')" class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
               </div>
             </div>
           </div>

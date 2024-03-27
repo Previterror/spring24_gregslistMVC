@@ -1,4 +1,5 @@
 import { Car } from './models/Car.js'
+import { Frog } from './models/Frogs.js'
 import { House } from './models/House.js'
 import { EventEmitter } from './utils/EventEmitter.js'
 import { createObservableProxy } from './utils/ObservableProxy.js'
@@ -62,6 +63,27 @@ class ObservableAppState extends EventEmitter {
       price: 75000,
       description: 'That is a lot of bathrooms considering the number of bedrooms and size of the house!',
       imgUrl: 'https://loveincorporated.blob.core.windows.net/contentimages/gallery/d1a88bb5-82c3-41a9-80c1-3b7f95859ca8-1.%20escape-pod-uk-exterior.jpg'
+    }),
+  ]
+
+  frogs = [
+    new Frog({
+      age: 2,
+      name: 'Elvis',
+      species: 'Red-Eyed Tree Frog',
+      weight: 2,
+      price: 85,
+      description: 'Red-eyed tree frogs have three eyelids on each eye!',
+      imgUrl: 'https://i.natgeofe.com/k/8fa25ea4-6409-47fb-b3cc-4af8e0dc9616/red-eyed-tree-frog-on-leaves-3-2.jpg',
+    }),
+    new Frog({
+      age: 5,
+      name: 'Ribbity',
+      species: 'Tomato Frog',
+      weight: 3,
+      price: 115,
+      description: 'This species is found exclusively in Madagascar, along the eastern rainforest belt of the island.',
+      imgUrl: 'https://www.thebiodude.com/cdn/shop/articles/546844B3-F6E8-45A0-8612-3F4A9B9718AE_7b7b6bd4-ca52-4376-91c1-b9ec216c8da9.jpg?v=1697552257',
     }),
   ]
 

@@ -1,0 +1,49 @@
+<div class="bg-white p-3">
+    <div class="card-body">
+        <p>Frog Swamp</p>
+        <h1>They're greasy and they got long tongues!</h1>
+    </div>
+
+    <section>
+        <form onsubmit="app.FrogController.addFrog()" class="row border shadow my-3 rounded py-2">
+            <h4>Too many frogs? Sell em' here!</h4>
+            <div class="col-4 mb-3">
+                <label for="">Age</label>
+                <input type="number" name="age" class="form-control" min="0" max="20" placeholder="Age">
+            </div>
+            <div class="col-4 mb-3">
+                <label for="">Name</label>
+                <input type="text" name="name" class="form-control" minlength="2" maxlength="25" placeholder="Kermit">
+            </div>
+            <div class="col-4 mb-3">
+                <label for="">Species</label>
+                <input type="text" name="species" class="form-control" minlength="1" maxlength="20"
+                    placeholder="Muppet">
+            </div>
+            <div class="col-2 mb-3">
+                <label for="">Weight</label>
+                <input type="number" name="weight" class="form-control" placeholder="0">
+            </div>
+            <div class="col-3 mb-3">
+                <label for="">Price</label>
+                <input type="number" name="price" class="form-control" placeholder="$$$">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="">Description</label>
+                <input type="text" name="description" class="form-control"
+                    placeholder="Life doesn't want you to have jetskis, but this frog does!">
+            </div>
+            <div class="col-12 mb-3">
+                <label for="">Image URL of Frog</label>
+                <input type="url" name="imgUrl" class=" form-control" placeholder="https://...">
+            </div>
+            <div class="mb-2">
+                <button type="submit" class="btn btn-primary">submit</button>
+            </div>
+        </form>
+    </section>
+
+    <div class="row" id="frogs-list">
+
+    </div>
+</div>
