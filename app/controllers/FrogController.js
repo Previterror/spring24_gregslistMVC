@@ -32,5 +32,6 @@ export class FrogController {
     sellFrog(frogID) {
         console.log('selling', frogID)
         frogService.sellFrogs(frogID)
+        this.drawFrogs()
     }
 }
